@@ -1,0 +1,136 @@
+.child{
+    position: relative;
+    display:inline-block;
+    margin: 5px;
+    padding:5px;
+    border : 15px;
+    background-color: white;
+    
+    width: 220px;
+    height: 200px;
+    overflow:auto;
+    margin-bottom:0;
+    flex-direction: row;
+    min-width:0;word-wrap: break-word;
+    
+} 
+
+div{
+    border-radius: 5px;
+}
+.text{
+    width: 90%;
+    border:1px solid blue;
+     box-shadow: 0px 0px 4px blue;
+    padding: 8px;
+     margin:5px;
+}
+textarea{
+    width:90%;
+     height:100%; 
+     border:1px solid blue;
+     box-shadow: 0px 0px 4px blue;
+    padding: 8px;
+     margin:5px;
+     
+}
+
+button{
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 0px 8px blue;
+    margin: 8px;
+    padding: 10px;
+    size: 15px;
+    
+}
+.headerbtn{
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 0px 0px 8px white;;
+    color: white;
+    border-radius: 5px;
+    
+}
+button:hover{
+    border-color: gray;
+}
+
+.header{
+    width :100%;
+    height: 70px;
+    background-color: black;
+    border-color: black;
+    color: white;
+    
+    border-radius: 5px;
+    
+    margin: 0px;
+
+}
+.notetable{
+    border: blue solid 1px;
+    background-color: lightyellow;
+    box-shadow: 0px 0px 4px blue;
+    padding-left: 5px;
+    margin-bottom: 4px;
+    
+}
+hr{
+    height: 0.5px;
+    width: 100%;
+    box-shadow: 0px 0px 0.5px blue;
+}
+
+p{
+    height: auto;
+    position: relative;
+    max-width: 200px;
+    overflow: auto;  
+    
+    left:20px;
+}
+.directory{
+    height: 50px;
+    text-align: center;
+    /* border-bottom:solid 1px rgb(49, 49, 245); */
+    /* border-spacing: 0px;
+    border-radius: 2px; */
+    padding: 2px;
+    margin: 2px;
+}
+tr{
+    align-items: center;
+}
+ol li{
+    border-bottom:solid 1px rgb(49, 49, 245);
+}
+.alert-success{
+    background-color: rgb(172, 255, 172);
+    border: solid 2px lime;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+.alert-danger{
+    display: block;
+    background-color: rgb(255, 122, 122);
+    border: solid 2px rgb(255, 39, 39);
+    border-radius: 5px;
+    width: 100%;
+    
+}
+button.alert{
+    box-shadow: 0px 0px 0px 0px;
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 5px;
+    
+}
+/* td{
+    border-right:solid 1px blue;
+    border-left:solid 1px blue;
+    padding: 0px;
+    margin: 0px;
+} */
