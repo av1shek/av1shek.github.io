@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 3(News website)</title>
+    <link rel="stylesheet" href="Project 3(new).css">
+</head>
+
+<body>
+    
+    <div class="header">
+        
+        <table>
+            <tr>
+                <td width=85% align="left">
+                    <font size=6 font-weight:500 style="color: white;">Bullet News</font><button id="home"
+                        class="headerbtn">Home</button>
+                </td>
+                <td width=45% align="right">
+                    <input type="text" id="searchBox" placeholder="Enter keyword">
+                </td>
+                <td width=10% align="right">
+                    <button id="searchBtn" class="headerbtn">Search</button>
+                </td>
+            </tr>
+            
+        </table>
+        
+        <table width=100%>
+            <tr width=100%>
+                <td width=16% class="category" onclick="newscategory('business')">Business</td>
+                <td width=16% class="category" onclick="newscategory('entertainment')">Entertainment</td>
+                <td width=16% class="category" onclick="newscategory('health')">Health</td>
+                <td width=16% class="category" onclick="newscategory('science')">Science</td>
+                <td width=16% class="category" onclick="newscategory('sports')">Sports</td>
+                <td width=16% class="category" onclick="newscategory('technology')">Technology</td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br><br>
+    
+<br><br>
+
+    <div id="list">
+       
+
+    </div>
+
+    <script src="Project 3(new).js"></script>
+</body>
+
+</html>
