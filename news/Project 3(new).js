@@ -28,7 +28,7 @@ function getdata(){
      list.innerHTML += `
      <div class="common row">
      <div class="frame"><img src='${element.urlToImage}'></div>
-         ${element.title} <a href="${element.url}">Read More</a>
+          <a href="${element.url}">${element.title}</a>
      </div>`;
       })
 
