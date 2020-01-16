@@ -1,0 +1,117 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+}
+body{
+    background-attachment: fixed;
+    background-image: url('green background.jpg');
+   
+   
+}
+.container{
+    margin: auto;
+    text-align: center;
+}
+.score{
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    background-color: greenyellow;
+display: inline-block;
+width: 10%;
+height: 80px;
+text-align: center;
+padding-top: 10px;
+
+}
+.gameArea{
+    /* background-image: url('road edited.jpg'); */
+    /* background-size: 100%; */
+    color: white;
+    display: inline-block;
+    background-color: rgb(54, 54, 54);
+    border-right: dashed 5px white;
+    border-left: dashed 5px white;
+    width: 40%;
+    left:30%;
+    height: 100vh;
+    /* margin: auto; */
+}
+.hide{
+    display: none;
+}
+.check{
+    background-color: red;
+    display: flex;
+}
+.startScreen{
+    position: fixed;
+    background-color: white;
+    border: solid 2px rebeccapurple;
+    top: 40%;
+    left: 35%;
+    width:30%;
+    z-index: 1;
+
+}
+.car{
+    z-index: 0;
+    background-image: url('mycar.jpg');
+    background-size: 100%;
+    position: fixed;
+    /* background-color: white; */
+    width: 6%;
+    height: 15%;
+    top: 85%;
+    left:30%;
+}
+.enemy{
+    z-index: 0;
+    /* background-image: url('green background.jpg'); */
+    background-color: red;
+    position: fixed;
+    /* background-color: white; */
+    width: 6%;
+    height: 15%;
+    top: 85%;
+    left:30%;
+}
+.line{
+    position: fixed;
+    background-color: white;
+    top:0%;
+    left:49%;
+    width: 1%;
+    height: 15%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width:675px){
+    .gameArea{
+    display: inline-block;
+    background-color: rgb(54, 54, 54);
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    }
+    .score{
+        width: 13%;
+    }
+} */
+
+@media (max-width:815px){
+    .score{
+        left: 10px;
+        width: 13%;
+    }
+}
