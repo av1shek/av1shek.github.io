@@ -69,8 +69,8 @@ def sendEmail(to, content):
 
 
 def findReceiver(name):
-    contacts = {"abhay": "abhayrajsingh1707@gmail.com",
-                "abhishek": "navodayanabhishek@gmail.com", "vishal": "vishalwarrior786@gmail.com"}
+    contacts = {"abhay": "yourcontacts@gmail.com",
+                "abhishek": "navodayanabhishek@gmail.com", "vishal": "yourcontacts@gmail.com"}
     try:
         receiverGmail = contacts[name]
         return receiverGmail
@@ -144,6 +144,9 @@ if __name__ == '__main__':
             codePath = "C:\\Users\\Abhishek Pratap\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
         elif 'email to' in query or 'send a mail' in query or 'mail to' in query:
+            # This will send mail only if there is any matching name in last of query
+            # like "email to abhishek" or "mail to abhishek" or "send a mail to my freind abhishek"
+            # notice last word in all strings contain a name which is exist as key in contacts (line 72)
             receiver = query.split(" ")[len(query.split(" "))-1]
             to = findReceiver(receiver)
             if to != 0:
