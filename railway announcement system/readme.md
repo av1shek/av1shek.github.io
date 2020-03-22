@@ -2,7 +2,7 @@
 
 This is a basic railway announcement system.
 It will take an excel sheet containing the trains information 
-and play as well as the audio file corresponding to that.
+andit will play announcement as well as save the the audio file corresponding to that.
 
 In this folder ```railway.mp3``` is audio file which contains s
 ome recorded voice of Indian Railway,which i will slice to create skeleton of announcement
