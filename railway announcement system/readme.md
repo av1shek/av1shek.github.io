@@ -2,12 +2,12 @@
 
 This is a basic railway announcement system.
 It will take an excel sheet containing the trains information 
-andit will play announcement as well as save the the audio file corresponding to that.
+andit will play announcement as well as save the the audio file(in hindi as well as english) corresponding to that.
 
 In this folder ```railway.mp3``` is audio file which contains s
 ome recorded voice of Indian Railway,which i will slice to create skeleton of announcement
-(means like "May i have your attention please train no _____  from ____ to _____ via _____ 
-from platform no _____)and the blank spaces will be filled by according 
+(means like "May i have your attention please train no _____ , (train name) from ____ to _____ via _____ 
+is arriving shortly on platform no _____)and the blank spaces will be filled by according 
 to data given in Excel Sheet.
 
 #### Brief description about main.py
