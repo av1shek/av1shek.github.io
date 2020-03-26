@@ -3,10 +3,10 @@ session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$db_host = "sql313.epizy.com";
-$db_user = "epiz_25143161";
-$db_password = "fMZ1XvdZ5Q";
-$db_name = "epiz_25143161_loginsystem";
+$db_host = "your host";
+$db_user = "your username";
+$db_password = "your password";
+$db_name = "your databasename";
 
 $con = mysqli_connect($db_host,$db_user,$db_password,$db_name);
 $q = "select * from users where username='$username' and password='$password'";
