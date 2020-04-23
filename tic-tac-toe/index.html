@@ -29,72 +29,100 @@
             <h1 class="display-4"><strong>Welcome to Tic Tac Toe!</strong> </h1>
 
             <a class="btn btn-primary btn-lg" href="#" id="restartBtn" role="button">Restart</a>
-            </div>
-            <div id="alertbox">
+        </div>
+        <div id="alertbox">
+            <div class="alert alert-primary" role="alert">
+                <h4 class="alert-heading">Player 1 Turn !</h4>
+            </div>`
+        </div>
 
-                
-
-            </div>
-            
-        </div class="game-area">
-        <table class="mx-auto">
-            <tr>
-                <td id="box0"></td>
-                <td id="box1"></td>
-                <td id="box2"></td>
-            </tr>
-            <tr>
-                <td id="box3"></td>
-                <td id="box4"></td>
-                <td id="box5"></td>
-            </tr>
-            <tr>
-                <td id="box6"></td>
-                <td id="box7"></td>
-                <td id="box8"></td>
-            </tr>
+    </div class="game-area">
+    <table class="mx-auto">
+        <tr>
+            <td id="box0"></td>
+            <td id="box1"></td>
+            <td id="box2"></td>
+        </tr>
+        <tr>
+            <td id="box3"></td>
+            <td id="box4"></td>
+            <td id="box5"></td>
+        </tr>
+        <tr>
+            <td id="box6"></td>
+            <td id="box7"></td>
+            <td id="box8"></td>
+        </tr>
 
 
 
-        </table>
+    </table>
 
     </div>
     <script>
-        window.onload = function(){ alert("Single tap for 0\nDouble tap for X")};
-        const winningConditions = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6] ];
+
+        let count = 0;
+        const winningConditions = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+
+
+        function fillText() {
+            if (count % 2 == 0) { this.innerText = "X"; }
+            else { this.innerText = "O"; }
+            count++;
+            //console.log("count", count);
+            document.getElementById("alertbox").innerHTML = `<div class="alert alert-primary" role="alert">
+                <h4 class="alert-heading">Player ${count % 2 + 1} Turn</h4>
+              </div>`;
+            validate();
+        }
 
         function validate() {
             for (let i = 0; i <= 7; i++) {
                 const winCondition = winningConditions[i];
-                let a = document.getElementById("box"+winCondition[0]).innerText;
-                let b = document.getElementById("box"+winCondition[1]).innerText;
-                let c = document.getElementById("box"+winCondition[2]).innerText;
-                if (a === '' || b === '' || c === '') {
-                    continue;
-                }
+                let a = document.getElementById("box" + winCondition[0]).innerText;
+                let b = document.getElementById("box" + winCondition[1]).innerText;
+                let c = document.getElementById("box" + winCondition[2]).innerText;
+                if (a === '' || b === '' || c === '') { continue; }
                 if (a === b && b === c) {
                     document.getElementById("alertbox").innerHTML = `<div class="alert alert-success" role="alert">
-                        <h4 class="alert-heading">${a} Won !</h4>
+                        <h4 class="alert-heading">Player ${(count + 1) % 2 + 1} Won !</h4>
                       </div>`;
+                    removeListener();
                     break
                 }
-            }  
+            }
+        }
+
+        function addListener() {
+            for (let i = 0; i < 9; i++) {
+                document.getElementById("box" + i).addEventListener('click', fillText)
+            }
+        }
+
+        function removeListener() {
+            for (let i = 0; i < 9; i++) { document.getElementById("box" + i).removeEventListener("click", fillText); }
         }
 
 
         document.getElementById("restartBtn").addEventListener('click', () => {
+            count = 0;
+            addListener();
+
             document.getElementById("alertbox").innerHTML = "";
             for (let i = 0; i < 9; i++) {
                 document.getElementById("box" + i).innerText = "";
             }
+            
+            document.getElementById("alertbox").innerHTML = `<div class="alert alert-primary" role="alert">
+                <h4 class="alert-heading">Player 1 Turn</h4>
+              </div>`;
+              
         })
 
-        for (let i = 0; i < 9; i++) {
-            document.getElementById("box" + i).addEventListener('click', function () { this.innerText = "O"; setTimeout(validate, 600); })
-            document.getElementById("box" + i).addEventListener('dblclick', function () { this.innerText = "X"; validate(); })
-        }
+        addListener();
 
-        
+
+
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
