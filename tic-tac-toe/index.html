@@ -68,6 +68,7 @@
         function fillText() {
             if (count % 2 == 0) { this.innerText = "X"; }
             else { this.innerText = "O"; }
+            this.removeEventListener('click',fillText);
             count++;
             //console.log("count", count);
             document.getElementById("alertbox").innerHTML = `<div class="alert alert-primary" role="alert">
