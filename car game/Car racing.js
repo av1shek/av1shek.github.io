@@ -96,7 +96,7 @@ function gamePlay(){
     }
     else{
         startScreen.className ='startScreen';
-    startScreen.innerHTML = `Congratulation! you scored ${scorepoint}<br>Press here to restart.`;
+    startScreen.innerHTML = `!Congratulation! you scored ${scorepoint}<br>Press here to restart.`;
     
     }
 }
